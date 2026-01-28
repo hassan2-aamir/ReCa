@@ -121,9 +121,16 @@ Replace the placeholders with your actual IDs.
 
 ## Step 3: Deploy the Page
 
-### Option A: Vercel (Recommended - Free & Easy)
+### Option A: GitHub Pages (Free & Built-in)
 
-1. Create account at [vercel.com](https://vercel.com)
+1. Push your code to a GitHub repository.
+2. Go to your Repository **Settings** > **Pages** (on the left sidebar).
+3. Under **Branch**, select `main` (or `master`) and `/ (root)`.
+4. Click **Save**.
+5. Wait ~1 minute, refresh, and your site will be live at `https://your-username.github.io/repo-name/`.
+
+### Option B: Vercel (Recommended - Free & Easy)
+
 2. Import your files
 3. Deploy
 4. Your site will be live at `https://your-project.vercel.app`
