@@ -189,10 +189,10 @@
                         <span class="en-text">Thanks for joining. We'll be in touch soon.</span>
                         <span class="urdu-text hidden">شامل ہونے کا شکریہ۔ ہم جلد رابطہ کریں گے۔</span>
                     </p>
-                    <button onclick="resetForm()" class="mt-6 text-blue-600 hover:text-blue-800 font-medium underline">
+                    <!-- <button onclick="resetForm()" class="mt-6 text-blue-600 hover:text-blue-800 font-medium underline">
                         <span class="en-text">Add another person</span>
                         <span class="urdu-text hidden">ایک اور شخص شامل کریں</span>
-                    </button>
+                    </button> -->
                 </div>
 
                 <!-- The Form -->
@@ -247,6 +247,26 @@
                                     <option value="Both">Both</option>
                                 </select>
                             </div>
+                        </div>
+
+                        <!-- How did you hear about us -->
+                        <div class="mb-5">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                <span class="en-text">How did you hear about us?</span>
+                                <span class="urdu-text hidden">آپ نے ہمارے بارے میں کیسے سنا؟</span> *
+                            </label>
+                            <select id="input-referral" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition bg-white">
+                                <option value="" disabled selected>Select...</option>
+                                <option value="Facebook">Facebook</option>
+                                <option value="Instagram">Instagram</option>
+                                <option value="LinkedIn">LinkedIn</option>
+                                <option value="Reddit">Reddit</option>
+                                <option value="Friend/Colleague">Friend / Colleague</option>
+                                <option value="Google/Search">Google / Search</option>
+                                <option value="WhatsApp">WhatsApp Groups</option>
+                                <option value="Other">Other</option>
+                            </select>
                         </div>
 
                         <!-- Honeypot (Anti-spam) -->
@@ -436,7 +456,7 @@
             if (camp) parts.push(`cmp:${camp}`);
             if (plain) parts.push(`tag:${plain}`);
 
-            return parts.length > 0 ? parts.join("|") : "organic";
+            return parts.length > 0 ? parts.join("|") : "";
         }
 
         // Initialize form inputs and action
@@ -479,6 +499,12 @@
         }
 
         function handleFormSubmit() {
+            // Combine UTM and Referral for Source
+            const utm = buildSource();
+            const referral = document.getElementById("input-referral").value;
+            const finalSource = [utm, referral].filter(Boolean).join(" | ") || "organic";
+            document.getElementById("input-source").value = finalSource;
+
             // Mark as submitted so the iframe onload event triggers success UI
             submitted = true;
 
