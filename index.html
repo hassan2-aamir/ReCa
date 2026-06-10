@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Join the Waitlist — ReCa</title>
     <meta name="description"
-        content="Borrow cars from locals. Earn from your car. Join the waitlist for early access to ReCa, Pakistan's peer-to-peer car rental platform." />
+        content="ReCa is building a mobile app to make renting cars easier for renters with trusted vehicles, verified photos, and transparent rates." />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -50,17 +50,21 @@
 
 <body class="font-sans text-gray-900 bg-white">
     <!-- Header Navigation -->
-    <nav class="sticky top-0 z-50 bg-gray-900 border-b border-gray-800">
+    <nav class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
+                <!-- Logo Area -->
                 <div class="flex items-center gap-2">
-                    <span class="text-2xl font-bold text-blue-600">🚗</span>
-                    <span class="font-bold text-lg hidden sm:inline text-white">ReCa</span>
+                    <img src="ReCa Logo.png" alt="ReCa logo" class="h-10 w-auto" />
+                    <!-- If you want text next to your logo, type it inside this span -->
+                    <span class="font-bold text-lg hidden sm:inline text-gray-900"></span>
                 </div>
+
+                <!-- Language Toggle Button -->
                 <button id="langToggle"
-                    class="px-3 py-2 text-sm font-medium rounded-lg bg-gray-800 text-gray-300 hover:bg-gray-700 transition tap-target"
+                    class="px-4 py-2 text-sm font-semibold rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 active:bg-gray-300 transition-colors duration-200 tap-target border border-gray-300/50"
                     aria-label="Toggle language" title="EN / اردو">
-                    EN / <span class="urdu-text">اردو</span>
+                    <span class="font-medium">EN</span> / <span class="urdu-text font-bold ">اردو</span>
                 </button>
             </div>
         </div>
@@ -72,8 +76,8 @@
         <section class="relative min-h-screen flex items-center justify-center py-12 sm:py-16 lg:py-20 px-4">
             <div class="max-w-4xl mx-auto text-center">
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6">
-                    <span class="en-text">Borrow cars from locals. Earn from your car.</span>
-                    <span class="urdu-text hidden">مقامی لوگوں سے کاریں کرائے پر لیں۔ اپنی کار سے کمائیں۔</span>
+                    <span class="en-text">Rent cars easily through a trusted mobile app.</span>
+                    <span class="urdu-text hidden">اعتماد کے ساتھ موبائل ایپ کے ذریعے کاریں کرائے پر لیں۔</span>
                 </h1>
 
                 <p class="text-xl sm:text-2xl text-gray-600 mb-8 leading-relaxed">
@@ -82,7 +86,7 @@
                         انتظار کی فہرست میں شامل ہوں۔</span>
                 </p>
 
-                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                     <a href="#join-form"
                         class="btn-focus tap-target bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg px-8 py-4 transition text-lg">
                         <span class="en-text">Join the Waitlist</span>
@@ -93,6 +97,14 @@
                         class="btn-focus tap-target border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold rounded-lg px-8 py-4 transition text-lg">
                         <span class="en-text">Learn More</span>
                         <span class="urdu-text hidden">مزید معلومات</span>
+                    </a>
+                </div>
+
+                <div class="mb-12 text-center">
+                    <a href="https://re-ca-app.vercel.app" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center justify-center rounded-full border border-blue-200 bg-white px-5 py-3 text-sm font-semibold text-blue-700 hover:bg-blue-50 transition">
+                        <span class="en-text">Have a 👀 at what are app will look like</span>
+                        <span class="urdu-text hidden">پروٹو ٹائپ دیکھیں</span>
                     </a>
                 </div>
 
@@ -114,46 +126,30 @@
 
                 <div class="space-y-8 text-lg text-gray-700">
                     <div class="space-y-4">
-                        <p>Have you ever wanted to rent a bike/car yourself for 4 to 5 hours for some task instead of
-                            doing multiple bykea/indrives? Is your vehicle free and you want to make money by renting it
-                            out.</p>
-                        <p>That's why we are creating a peer-to-peer car rental app where people can rent cars directly
-                            from other owners.</p>
+                        <p>We are building a mobile app that makes renting cars easier for renters across Pakistan.
+                            Instead of searching Google, collecting multiple WhatsApp quotes, and worrying about vehicle
+                            availability, ReCa brings trusted vehicles, verified photos, and transparent rates into one
+                            simple experience.</p>
+                        <p>Our goal is to give renters a smoother, safer way to book the right car for their trip,
+                            commute, or daily need without the usual confusion and uncertainty.</p>
                     </div>
 
-                    <div class="grid md:grid-cols-2 gap-8 mt-8">
-                        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-                            <h3 class="text-xl font-bold mb-4 text-gray-900">For Car Owners:</h3>
-                            <ul class="space-y-3">
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 mr-2 font-bold">-</span>
-                                    <span>You can list your car in minutes</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 mr-2 font-bold">-</span>
-                                    <span>Set your own hourly/daily rates</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-blue-600 mr-2 font-bold">-</span>
-                                    <span>Earn passive income</span>
-                                </li>
-                            </ul>
-                        </div>
-
+                    <div class="mt-8">
                         <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
                             <h3 class="text-xl font-bold mb-4 text-gray-900">For Renters:</h3>
                             <ul class="space-y-3">
                                 <li class="flex items-start">
                                     <span class="text-blue-600 mr-2 font-bold">-</span>
-                                    <span>You can find cars right in your area (no driving to rental locations)</span>
+                                    <span>Find standard, trusted vehicles with real photos and clear listings</span>
                                 </li>
                                 <li class="flex items-start">
                                     <span class="text-blue-600 mr-2 font-bold">-</span>
-                                    <span>Save 20-40% compared to Car Rental Agencies</span>
+                                    <span>Skip the back-and-forth of Google searches and WhatsApp quotes</span>
                                 </li>
                                 <li class="flex items-start">
                                     <span class="text-blue-600 mr-2 font-bold">-</span>
-                                    <span>Rent for exactly as long as you need (even just a few hours)</span>
+                                    <span>Book with transparent rates and more confidence in what you will
+                                        receive</span>
                                 </li>
                             </ul>
                         </div>
@@ -221,6 +217,17 @@
                                 placeholder="ali@example.com">
                         </div>
 
+                        <!-- Phone -->
+                        <div class="mb-5">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                <span class="en-text">Phone Number</span>
+                                <span class="urdu-text hidden">فون نمبر</span>
+                            </label>
+                            <input type="tel" id="input-phone"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                                placeholder="03XX-XXXXXXX">
+                        </div>
+
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
                             <!-- City -->
                             <div>
@@ -233,41 +240,53 @@
                                     placeholder="Karachi">
                             </div>
 
-                            <!-- Role -->
+                            <!-- How often do you rent a car -->
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">
-                                    <span class="en-text">I want to...</span>
-                                    <span class="urdu-text hidden">میں چاہتا ہوں...</span> *
+                                    <span class="en-text">How often do you rent a car?</span>
+                                    <span class="urdu-text hidden">آپ کتنی بار کار کرائے پر لیتے ہیں؟</span>
                                 </label>
-                                <select id="input-role" required
-                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition bg-white">
-                                    <option value="" disabled selected>Select...</option>
-                                    <option value="Renter (I want to rent cars)">Rent a car (Renter)</option>
-                                    <option value="Owner (I want to rent out my car)">Rent out my car (Owner)</option>
-                                    <option value="Both">Both</option>
-                                </select>
+                                <input type="text" id="input-frequency"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                                    placeholder="Daily, weekly, occasionally...">
                             </div>
                         </div>
 
-                        <!-- How did you hear about us -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+                            <!-- What type of car do you actually rent -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    <span class="en-text">What type of car do you actually rent?</span>
+                                    <span class="urdu-text hidden">آپ واقعی کون سی کار کرائے پر لیتے ہیں؟</span>
+                                </label>
+                                <input type="text" id="input-car-type"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                                    placeholder="Sedan, SUV, hatchback, luxury...">
+                            </div>
+
+                            <!-- How did you hear about us -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    <span class="en-text">How did you hear about us?</span>
+                                    <span class="urdu-text hidden">آپ نے ہمارے بارے میں کیسے سنا؟</span> *
+                                </label>
+                                <input type="text" id="input-referral" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                                    placeholder="Facebook, Instagram, friend, search...">
+                            </div>
+                        </div>
+
+                        <!-- Purpose -->
                         <div class="mb-5">
                             <label class="block text-sm font-medium text-gray-700 mb-2">
-                                <span class="en-text">How did you hear about us?</span>
-                                <span class="urdu-text hidden">آپ نے ہمارے بارے میں کیسے سنا؟</span> *
+                                <span class="en-text">For what purpose do you rent a car?</span>
+                                <span class="urdu-text hidden">آپ کار کن مقاصد کے لیے کرائے پر لیتے ہیں؟</span>
                             </label>
-                            <select id="input-referral" required
-                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition bg-white">
-                                <option value="" disabled selected>Select...</option>
-                                <option value="Facebook">Facebook</option>
-                                <option value="Instagram">Instagram</option>
-                                <option value="LinkedIn">LinkedIn</option>
-                                <option value="Reddit">Reddit</option>
-                                <option value="Friend/Colleague">Friend / Colleague</option>
-                                <option value="Google/Search">Google / Search</option>
-                                <option value="WhatsApp">WhatsApp Groups</option>
-                                <option value="Other">Other</option>
-                            </select>
+                            <textarea id="input-purpose" rows="3"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                                placeholder="Daily commute, family trip, business, etc."></textarea>
                         </div>
+
 
                         <!-- Honeypot (Anti-spam) -->
                         <div style="display:none;">
@@ -323,8 +342,8 @@
                         <span class="urdu-text hidden">ریکا</span>
                     </h3>
                     <p class="text-sm">
-                        <span class="en-text">Peer-to-peer car rentals made simple.</span>
-                        <span class="urdu-text hidden">ہم سے ہم تک کار کرائے۔</span>
+                        <span class="en-text">Car rentals made simple.</span>
+                        <span class="urdu-text hidden">ہم کار کرائے۔</span>
                     </p>
                 </div>
                 <!-- <div>
@@ -374,7 +393,7 @@
 
             <div class="border-t border-gray-800 pt-8 text-sm text-center">
                 <p>
-                    <span class="en-text">&copy; 2026 ReCa. All rights reserved. Made with ❤️ for Pakistan.</span>
+                    <span class="en-text">&copy; 2026 ReCa. All rights reserved.</span>
                     <span class="urdu-text hidden">&copy; 2026 ریکا۔ تمام حقوق محفوظ ہیں۔ پاکستان کے لیے محبت سے بنایا
                         گیا۔</span>
                 </p>
@@ -420,14 +439,17 @@
     <!-- Google Forms Logic -->
     <script>
         // ===== CONFIGURATION (Replace with your actual IDs) =====
-        const FORM_ID = "1FAIpQLSd9iBMVUAMGc3oAXSGEUOzxWfBwB1XKj3KCLxR3NS61TraZ2w";
+        const FORM_ID = "1FAIpQLSdujo75fVn1FqpR5OaHTRNU1QEmlqvmfh9OXpViHREmG-kpPA";
         const ENTRY_IDS = {
-            NAME: "808644764",        // e.g., "123456789"
-            EMAIL: "1224357367",      // e.g., "987654321"
-            CITY: "958994699",        // e.g., "456789123"
-            ROLE: "299895401",        // e.g., "789123456"
-            SOURCE: "1590272573",    // e.g., "321654987"
-            CONSENT: "1639670714",  // e.g., "654987321"
+            NAME: "2118135724",
+            EMAIL: "579587264",
+            PHONE: "1089197582",
+            CITY: "152637419",
+            FREQUENCY: "971544553",           // Replace with your Google Form entry ID for How often do you rent a car?
+            PURPOSE: "1758293574",             // Replace with your Google Form entry ID for purpose
+            CAR_TYPE: "714080333",            // Replace with your Google Form entry ID for car type
+            SOURCE: "1850048041",
+            CONSENT: "1639670714",
         };
         // =========================================================
 
@@ -469,8 +491,11 @@
             // Map HTML inputs to Google Form Entry IDs dynamically
             document.getElementById("input-name").name = `entry.${ENTRY_IDS.NAME}`;
             document.getElementById("input-email").name = `entry.${ENTRY_IDS.EMAIL}`;
+            if (ENTRY_IDS.PHONE) document.getElementById("input-phone").name = `entry.${ENTRY_IDS.PHONE}`;
             document.getElementById("input-city").name = `entry.${ENTRY_IDS.CITY}`;
-            document.getElementById("input-role").name = `entry.${ENTRY_IDS.ROLE}`;
+            if (ENTRY_IDS.FREQUENCY) document.getElementById("input-frequency").name = `entry.${ENTRY_IDS.FREQUENCY}`;
+            if (ENTRY_IDS.PURPOSE) document.getElementById("input-purpose").name = `entry.${ENTRY_IDS.PURPOSE}`;
+            if (ENTRY_IDS.CAR_TYPE) document.getElementById("input-car-type").name = `entry.${ENTRY_IDS.CAR_TYPE}`;
             document.getElementById("input-source").name = `entry.${ENTRY_IDS.SOURCE}`;
             document.getElementById("input-consent").name = `entry.${ENTRY_IDS.CONSENT}`;
 
@@ -478,21 +503,10 @@
             const paramName = getParam("name");
             const paramEmail = getParam("email");
             const paramCity = getParam("city");
-            const paramRole = getParam("role");
 
             if (paramName) document.getElementById("input-name").value = paramName;
             if (paramEmail) document.getElementById("input-email").value = paramEmail;
             if (paramCity) document.getElementById("input-city").value = paramCity;
-            if (paramRole) {
-                const sel = document.getElementById("input-role");
-                for (let i = 0; i < sel.options.length; i++) {
-                    // simplified matching for role
-                    if (sel.options[i].value.toLowerCase().includes(paramRole.toLowerCase())) {
-                        sel.selectedIndex = i;
-                        break;
-                    }
-                }
-            }
 
             // Set Source
             document.getElementById("input-source").value = buildSource();
@@ -513,8 +527,7 @@
                 gtag("event", "submit_waitlist_form", {
                     page_path: window.location.pathname,
                     utm_source: getParam("utm_source") || "direct",
-                    city: document.getElementById("input-city").value,
-                    role: document.getElementById("input-role").value
+                    city: document.getElementById("input-city").value
                 });
             }
         }
